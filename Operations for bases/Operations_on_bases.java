@@ -1,3 +1,8 @@
+/*
+The purpose of this program is to apply mathematical operations to 2 numbers taken according to the base entered from 2 to 10 
+and give the result to the user. Firstly, the program converts 2 integer numbers taken from the user to decimal and applies 
+the desired mathematical operations to these two numbers. Finally, it converts the decimal number to the entered base.
+*/
 import java.util.Scanner;
 
 public class Operations_on_bases {
