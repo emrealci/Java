@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Hw3_Pro3_150719029 {
+public class pattern {
   public static void main(String[] args) {
 		
 	Scanner scan = new Scanner(System.in);
