@@ -1,0 +1,78 @@
+ ˛∫æ   = ƒ  Main  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this LHw4_150719029; main ([Ljava/lang/String;)V  java/util/Scanner	    java/lang/System   in Ljava/io/InputStream;
+     (Ljava/io/InputStream;)V	     out Ljava/io/PrintStream;   TMenu: 
+1. Chance Case 
+2. Count occurrences 
+3. Encryption 
+4. Statistics 
+5. Exit 
+
+ " $ # java/io/PrintStream % & println (Ljava/lang/String;)V ( Please select an option: 
+ " * + & print
+  - . / nextInt ()I
+  1 2 3 nextLine ()Ljava/lang/String; 5 Please enter an input String: 
+  7 8 9 
+changeCase &(Ljava/lang/String;)Ljava/lang/String;
+  ; < = updateWordCount (ILjava/lang/String;)I
+  ? @ = updateLetterCount B $Please  enter  an  input  sentence:  D Please enter an input word: 
+ F H G java/lang/String I J charAt (I)C
+ L N M java/lang/Character O P isLetter (C)Z
+ F R S / length U  
+ F W X Y indexOf (Ljava/lang/String;I)I
+ F [ \ ] 	substring (II)Ljava/lang/String;
+  _ ` a countOccurences (([Ljava/lang/String;Ljava/lang/String;)I c java/lang/StringBuilder
+ F e f g valueOf &(Ljava/lang/Object;)Ljava/lang/String;
+ b i  & k 	 appears 
+ b m n o append -(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ b q n r (I)Ljava/lang/StringBuilder; t  time(s) in the sentence.
+ b v w 3 toString y Enter an integer pattern: 
+  { | } 
+encryption '(Ljava/lang/String;I)Ljava/lang/String;  Source:  Å Encrypted: 
+  É Ñ Ö 	printStat (II)V á Program ends. Bye :) args [Ljava/lang/String; scan Ljava/util/Scanner; totalNumWords I totalNumLetters option s Ljava/lang/String; sentence word count i arr index lengh result pattern returnedStr StackMapTable â ü  
+ L ° ¢ £ toUpperCase (C)C
+ b • n ¶ (C)Ljava/lang/StringBuilder;
+ L ® © £ toLowerCase str buffer C
+ F Æ Ø ∞ equalsIgnoreCase (Ljava/lang/String;)Z counter ≥ The number of words:  µ "The number of alphabetic letters:  	wordCount letterCount π [[C letter newStr lastStr row column flag m j 
+SourceFile Main.java !               /     *∑ ±    
+                    	      ›    Ãª Y≤ ∑ L=>≤ ∂ !≤ '∂ )+∂ ,6+∂ 0W† *≤ 4∂ )+∂ 0:≤ ∏ 6∂ !∏ :=∏ >>† Ò≤ A∂ )+∂ 0:∏ :=∏ >>≤ C∂ )+∂ 0:∏ :=∏ >>66ß )∂ E † `∂ E∏ Kô û ÑÑ∂ Qd°ˇ—ÑΩ F:6	6
+ß 2T
+∂ V6† 
+∂ Q6	
+∂ ZSÑ	`6
+
+∂ Qd°ˇ»∏ ^6
+≤ ª bY∏ d∑ hj∂ l
+∂ ps∂ l∂ u∂ !† d≤ 4∂ )+∂ 0:≤ x∂ )+∂ ,6∏ :=∏ >>∏ z:≤ ª bY~∑ h∂ l∂ u∂ !≤ ª bYÄ∑ h∂ l∂ u∂ !† ∏ Ç†˛O≤ Ü∂ !±    
+   ﬁ 7              %  *  0  8  > ! I " P # W & ] ' e ( k * r + y - Å . á 0 é 1 ï 3 ò 5 û 6 æ 7 ¡ 5 – ; ” = ⁄ > › @ „ A Ó C Ù D ˚ G	 H I @ K' LK PQ QY R_ Tg Um Wt X{ ZÑ \õ ]≤ a∏ bΩ e√ fÀ j    ∂   Ã à â   ¡ ä ã  ø å ç  Ω é ç  %¶ è ç  >  ê ë  k ‡ í ë  á ƒ ì ë  ò ≥ î ç  õ 5 ï ç  ⁄ q ñ â  › n ó ç 	 ‡ > ï ç 
+ Ó $ ò ç ' $ ô ç 
+_ S í ë m E ö ç Ñ . õ ë  ú   _ ˛  ¸ Gˇ F 	 ù  F F  "ˇ   ù  F F ù  ¸ ˙ ˇ 8  ù   ˚ f
+ 	 8 9     ›     ^ûL=ß O*∂ E>*∂ Ea° &*∂ Ez£ ª bY+∏ d∑ h∏ †∂ §∂ uLß ª bY+∏ d∑ h∏ ß∂ §∂ uLÑ*∂ Q°ˇØ+∞    
+   & 	   m  o  p  r " s 8 t ; v Q o \ z    *    ^ ™ ë    [ ê ë   W ï ç   C ´ ¨  ú    ˝  F¸ 2˙  	 ` a     ä     =>ß *2+∂ ≠ô ÑÑ*æ°ˇÌ¨    
+       ~  Ä  Å  Ç  Ä  Ö    *     í â      ì ë    ± ç    ï ç  ú   	 ˝  	 < =     ï     5=ß $+∂ E † +`∂ E∏ Kô 
+û Ñ Ñ+∂ Qd°ˇÿÑ ¨    
+       â  ä   ã # â 0 è 3 ê         5 î ç     5 ™ ë   . ï ç  ú    ¸  	 @ =     |      =ß +∂ E∏ Kô Ñ Ñ+∂ Q°ˇÍ¨    
+       î  ï  ñ  î  ô           î ç       ™ ë    ï ç  ú    ¸  	 Ñ Ö     i     -≤ ª bY≤∑ h∂ p∂ u∂ !≤ ª bY¥∑ h∂ p∂ u∂ !±    
+       ù  û , ü        - ∂ ç     - ∑ ç  	 | }    É    ö=ûNû:6ß `*∂ E ü R*∂ E6*∂ Ea° (*∂ Ez£ ª bY-∏ d∑ h∏ †∂ §∂ uNß ª bY-∏ d∑ h∂ §∂ uNÑÑ*∂ Q°ˇù≈ ∏:6666	† ^6
+ß  ª bY∏ d∑ h-
+∂ E∂ §∂ u:Ñ
+
+-∂ Q°ˇ›6
+ß  ª bY∏ d∑ h-
+∂ E∂ §∂ u:Ñ
+
+-∂ Q°ˇ›ß f6
+ß W¢ )2-
+∂ EUÑÑÑ† 6	Ñ˛ß (	† "2-
+∂ EUÑˇÑö 	66	Ñ
+
+-∂ Q°ˇ¶6
+ß @6ß -
+24ô ª bY∏ d∑ h
+24∂ §∂ u:Ñ2æ°ˇœÑ
+
+æ°ˇæ∞    
+     2   ¢  £  § 	 ß  ©  ™ " ¨ 8 ≠ O Æ R ∞ f ≥ i ß u ∏ } π Ä ∫ É ª Ü º â æ é ø î ¿ Æ ø ∫ √ ¿ ƒ ⁄ √ Ê ∆ È   Ô Ã ı Œ œ –	 — ” ‘ ’ ÷ €! ›/ ﬁ2 ﬂ5 ‚: „= ‰@  L ÎR ÏX Ìc Ó Ïå Îó Ú    ¨   ö ™ ë    ö ö ç  ò ∫ ç  ï ª ë  	ë º ë   i ï ç  " G ´ ¨  } ñ π  Ä Ω ç  É æ ç  Ü ´ ç  â ø ç 	 ë ) ï ç 
+ Ω ) ï ç 
+ Ï ` ï ç 
+O H ¿ ç 
+U 7 ¡ ç  ú   U ˇ   F F F  ¸ B˙ ˇ '  F F F ∏  ˙ ¸ +$˙ ¸ ¸ &˙   ¬    √
